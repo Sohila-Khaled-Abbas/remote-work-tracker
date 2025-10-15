@@ -2,7 +2,7 @@ import scrapy
 from ..items import JobItem
 
 class WeWorkRemotelySpider(scrapy.Spider):
-    name = "weworkremotely"
+    name = "weworkremotely"   # ← must match your command exactly
     allowed_domains = ["weworkremotely.com"]
     start_urls = ["https://weworkremotely.com/remote-jobs/search?term=data"]
 
