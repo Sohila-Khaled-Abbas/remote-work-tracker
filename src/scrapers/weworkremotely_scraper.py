@@ -5,6 +5,8 @@ from datetime import datetime
 import sys, os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 from src.scrapers.base_scraper import BaseScraper
+import logging
+
 
 class WeWorkRemotelyScraper(BaseScraper):
     BASE_URL = "https://weworkremotely.com/remote-jobs"
@@ -55,7 +57,6 @@ if __name__ == "__main__":
     scraper.save_to_json(jobs)
     scraper.quit()
 
-import logging
 
 logging.basicConfig(filename="../../data/logs/weworkremotely.log",
                     level=logging.INFO,
