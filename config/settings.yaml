@@ -1,0 +1,7 @@
+db:
+  dialect: postgresql
+  host: localhost
+  port: 5432
+  database: remote_jobs_db
+  user: postgres
+  password: yourpassword
