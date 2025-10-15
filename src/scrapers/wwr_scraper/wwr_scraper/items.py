@@ -1,12 +1,12 @@
+# Define here the models for your scraped items
+#
+# See documentation in:
+# https://docs.scrapy.org/en/latest/topics/items.html
+
 import scrapy
 
-class JobItem(scrapy.Item):
-    job_title = scrapy.Field()
-    company = scrapy.Field()
-    category = scrapy.Field()
-    tags = scrapy.Field()
-    date_posted = scrapy.Field()
-    salary = scrapy.Field()
-    region = scrapy.Field()
-    job_link = scrapy.Field()
-    description = scrapy.Field()
+
+class WwrScraperItem(scrapy.Item):
+    # define the fields for your item here like:
+    # name = scrapy.Field()
+    pass
