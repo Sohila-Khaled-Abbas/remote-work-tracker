@@ -100,18 +100,20 @@ class WeWorkRemotelyScraper(BaseScraper):
     # ---------------------------------------------------------
     # Save to JSON
     # ---------------------------------------------------------
-    def save_to_json(self, data, path="../../data/raw/weworkremotely.json"):
-        """Save scraped jobs to a JSON file at the given path."""
-        try:
-            # Ensure the destination directory exists
-            os.makedirs(os.path.dirname(path), exist_ok=True)
-    
-            # Write the JSON file with UTF-8 encoding
-            with open(path, "w", encoding="utf-8") as f:
-                json.dump(data, f, ensure_ascii=False, indent=2)
-    
-            logging.info(f"Saved {len(data)} jobs to {path}")
-            return path
-        except Exception as e:
-            logging.error(f"Failed to save data to {path}: {e}")
-            raise
+    def save_to_json(self, data, path="../../data/raw/"):
+        """Save scraped data to JSON file."""
+        os.makedirs(path, exist_ok=True)
+        filename = f"{path}weworkremotely_{datetime.today().strftime('%Y%m%d')}.json"
+        with open(filename, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        logging.info(f"Data saved to {filename}")
+        print(f"[INFO] Data saved to {filename}")
+
+# ---------------------------------------------------------
+# Run scraper directly
+# ---------------------------------------------------------
+if __name__ == "__main__":
+    scraper = WeWorkRemotelyScraper()
+    jobs = scraper.scrape_jobs(pages=3, include_description=False)  # set True if you want job descriptions
+    scraper.save_to_json(jobs)
+    scraper.quit()
