@@ -2,7 +2,6 @@ import json
 import time
 from bs4 import BeautifulSoup
 from datetime import datetime
-from scrapers.base_scraper import BaseScraper
 
 class WeWorkRemotelyScraper(BaseScraper):
     BASE_URL = "https://weworkremotely.com/remote-jobs"
