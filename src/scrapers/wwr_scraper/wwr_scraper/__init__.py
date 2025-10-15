@@ -1,40 +1,48 @@
-# Ensures the folder is treated as a Python package.
-# Helps Scrapy discover spiders automatically.
+"""
+We Work Remotely Scraper Package
+--------------------------------
+This module initializes the Scrapy project for scraping remote job listings 
+from WeWorkRemotely.com.
 
-__all__ = ['spiders']
-from typing import Any, AsyncIterator, ClassVar, TypeVar
-from scrapy.spiders import Spider
-from scrapy.http import Request, Response
-from scrapy.utils.trackref import object_ref
-from scrapy.utils.misc import load_object
-from scrapy.utils.defer import deferred_from_coro
-from scrapy.utils.spider import iterate_spider_output
-from scrapy.crawler import Crawler
-from scrapy import signals
-from scrapy.exceptions import NotConfigured
-from scrapy.utils.log import log_scrapy_info
-from scrapy.utils.python import to_unicode
-from scrapy.utils.reqser import request_to_dict, request_from_dict
-from scrapy.utils.response import response_to_dict, response_from_dict
-from scrapy.utils.signal import send_catch_log
-from scrapy.utils.defer import mustbe_deferred
-from scrapy.utils.conf import build_component_list
-from scrapy.utils.job import job_dir
-from scrapy.extensions.closespider import CloseSpider   
-from scrapy.extensions.feedexport import FeedExporter   
-from scrapy.extensions.logstats import LogStats
-from scrapy.extensions.memusage import MemoryUsage
-from scrapy.extensions.throttle import AutoThrottle
-from scrapy.extensions.telnet import TelnetConsole  
-from scrapy.extensions.corestats import CoreStats           
-from scrapy.extensions.spiderstate import SpiderState   
-from scrapy.extensions.httpcache import HttpCacheMiddleware 
-from scrapy.extensions.warnings import Warnings 
-from scrapy.extensions.feedexport import FEED_EXPORTERS
-from scrapy.extensions.closespider import CloseSpider
-from scrapy.extensions.memusage import MemoryUsage
-from scrapy.extensions.throttle import AutoThrottle
-from scrapy.extensions.telnet import TelnetConsole  
-from scrapy.extensions.corestats import CoreStats
-from scrapy.extensions.spiderstate import SpiderState
-from scrapy.extensions.httpcache import HttpCacheMiddleware
+Purpose:
+    - Defines the root package for the wwr_scraper.
+    - Ensures relative imports work correctly.
+    - Enables external modules (ETL pipeline, orchestration scripts, etc.)
+      to import Scrapy spiders and items cleanly.
+
+Author: Sohila Khaled Abbas
+Version: 1.0
+Created: 2025-10-14
+"""
+
+# ✅ Standard library imports
+import os
+import sys
+
+# ✅ Ensure Python can resolve relative imports when running scrapy commands
+current_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.dirname(current_dir)
+if project_root not in sys.path:
+    sys.path.append(project_root)
+
+# ✅ Scrapy utilities (for serialization if needed later)
+try:
+    from scrapy.utils.request import request_to_dict, request_from_dict
+except ImportError:
+    # Compatibility fallback for older Scrapy versions
+    request_to_dict = None
+    request_from_dict = None
+
+# ✅ Version and metadata
+__version__ = "1.0"
+__author__ = "Sohila Khaled Abbas"
+__description__ = "Scrapy project for extracting remote job postings from We Work Remotely."
+__project_name__ = "wwr_scraper"
+
+# ✅ Optional: define a logger for package-level debugging
+import logging
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+logger.info(f"Initialized {__project_name__} v{__version__}")
+logger.info(f"Author: {__author__}")
