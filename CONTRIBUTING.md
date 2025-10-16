@@ -53,14 +53,14 @@ Before you begin, ensure you have the following installed:
 2. **Clone Your Fork**
 
    ```bash
-   git clone https://github.com/YOUR-USERNAME/remote-work-tracker.git
+   git clone https://github.com/Sohila-Khaled-Abbas/remote-work-tracker.git
    cd remote-work-tracker
    ```
 
 3. **Add Upstream Remote**
 
    ```bash
-   git remote add upstream https://github.com/ORIGINAL-OWNER/remote-work-tracker.git
+   git remote add upstream https://github.com/Sohila-Khaled-Abbas/remote-work-tracker.git
    ```
 
 4. **Create a Virtual Environment**
@@ -92,8 +92,6 @@ Before you begin, ensure you have the following installed:
 ## 🤝 How Can I Contribute?
 
 ### 🐛 Reporting Bugs
-
-Before creating bug reports, please check the [existing issues](https://github.com/ORIGINAL-OWNER/remote-work-tracker/issues) to avoid duplicates.
 
 **When submitting a bug report, include:**
 
@@ -674,7 +672,6 @@ When updating documentation:
 Contributors will be recognized in:
 
 - **README.md** Contributors section
-- **Release notes** for significant contributions
 - **Project documentation**
 
 ---
@@ -691,9 +688,8 @@ Looking for a place to start? Check out issues labeled:
 
 ## 📞 Contact
 
-- **Project Maintainer:** [INSERT NAME]
-- **Email:** [INSERT EMAIL]
-- **GitHub:** [@INSERT-USERNAME]
+- **Project Maintainer:** Sohila Khaled Abbas
+- **GitHub:** [@Sohila-Khaled-Abbas]
 
 ---
 
@@ -707,7 +703,7 @@ By contributing to this project, you agree that your contributions will be licen
 
 **Thank you for contributing to Remote Work Tracker!** 🙏
 
-Made with ❤️ by the community
+Made with ❤️ by Sohila
 
 </div>
 
