@@ -1,0 +1,13 @@
+requests 
+selenium
+beautifulsoup4
+lxml
+pandas
+numpy
+ipython
+matplotlib
+seaborn
+sqlalchemy
+psycopg2-binary
+black   
+isort
