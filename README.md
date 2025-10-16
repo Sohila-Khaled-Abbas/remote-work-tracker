@@ -126,7 +126,7 @@ The `remote_jobs.db` SQLite database will be created after running the ETL proce
 
 ## License
 
-This project is open-source and available under the MIT License. (You can specify your preferred license here).
+This project is open-source and available under the [MIT License](LICENSE).
 
 ## Contact
 

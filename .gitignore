@@ -1,0 +1,423 @@
+# ============================================================================
+# Remote Work Tracker - .gitignore
+# ============================================================================
+# Comprehensive gitignore for Python, Data Science, and BI projects
+# Last Updated: 2025-10-16
+# ============================================================================
+
+# ============================================================================
+# Python
+# ============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ============================================================================
+# Data Science & Machine Learning
+# ============================================================================
+
+# Jupyter Notebook checkpoints
+*.ipynb_checkpoints
+
+# Data files
+*.csv
+*.dat
+*.tsv
+*.txt
+*.json
+*.xml
+*.xlsx
+*.xls
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# Model files
+*.model
+*.h5
+*.pb
+*.pt
+*.pth
+*.ckpt
+*.weights
+
+# Datasets (keep sample data, ignore large datasets)
+data/raw/*
+data/processed/*
+data/external/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/external/.gitkeep
+
+# ============================================================================
+# Database
+# ============================================================================
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+remote_jobs.db
+
+# PostgreSQL
+*.pgsql
+
+# MySQL
+*.sql
+*.mysql
+
+# Database backups
+*.dump
+*.bak
+
+# ============================================================================
+# Business Intelligence & Visualization
+# ============================================================================
+
+# Power BI files
+*.pbix
+*.pbit
+*.rdl
+
+# Tableau files
+*.twb
+*.twbx
+*.tds
+*.tdsx
+
+# Temporary BI files
+~$*.pbix
+
+# ============================================================================
+# IDEs & Editors
+# ============================================================================
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+.history/
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.vim/
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Atom
+.atom/
+
+# JetBrains IDEs
+.idea/
+*.iml
+out/
+
+# ============================================================================
+# Operating Systems
+# ============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================================
+# Project Specific
+# ============================================================================
+
+# Scraped data outputs
+remotive_jobs.csv
+remotive_jobs_extended.csv
+fake_jobs.csv
+himalayas_jobs.csv
+weworkremotely_jobs.csv
+
+# Logs
+logs/
+*.log
+scraping.log
+etl.log
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+
+# Configuration files with sensitive data
+config.ini
+secrets.yaml
+.secrets
+
+# API keys and credentials
+.env.local
+.env.*.local
+credentials.json
+api_keys.txt
+
+# Cache directories
+.cache/
+__cache__/
+
+# Build artifacts
+build/
+dist/
+
+# Documentation builds
+docs/_build/
+docs/.doctrees/
+
+# ============================================================================
+# Testing
+# ============================================================================
+
+# Test outputs
+test_output/
+test_results/
+.pytest_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+coverage.xml
+
+# ============================================================================
+# Miscellaneous
+# ============================================================================
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Lock files
+*.lock
+
+# System files
+.Spotlight-V100
+.Trashes
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.fseventsd
+
+# ============================================================================
+# Keep These Files (Exceptions)
+# ============================================================================
+
+# Keep empty directories
+!.gitkeep
+
+# Keep sample/example files
+!**/examples/**/*.csv
+!**/samples/**/*.json
+
+# Keep documentation assets
+!docs/**/*.png
+!docs/**/*.jpg
+!docs/**/*.svg
+
+# ============================================================================
+# End of .gitignore
+# ============================================================================
