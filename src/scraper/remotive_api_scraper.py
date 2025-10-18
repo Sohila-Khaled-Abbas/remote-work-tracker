@@ -76,7 +76,7 @@ if __name__ == "__main__":
             # Fetch a larger limit for each category, respecting API rate limits
             # Remotive API advises max 4 requests a day, so we'll fetch a reasonable amount per category.
             # For demonstration, let's try to get up to 100 jobs per category if available.
-            category_data = scrape_remotive_api(category=category_slug, limit=100)
+            category_data = scrape_remotive_api(category=category_slug, limit=5000)
             if not category_data.empty:
                 all_scraped_data = pd.concat([all_scraped_data, category_data], ignore_index=True)
             time.sleep(2) # Pause between category requests to be polite
